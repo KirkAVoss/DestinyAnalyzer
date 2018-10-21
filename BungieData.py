@@ -250,9 +250,9 @@ if __name__ == '__main__':
             time.sleep(2)
     '''
     #Second attempt, pull 5k entries, unformatted.
-    game = 2719755481 #note that this is 100 gameids higher than my IB PvP game
-    with open('./data/unformatted_unfiltered_pgcrdata_5k.json', 'a+') as outfile:
-        for i in range(5000):
+    game = 2719754481 #note that this is 1000 gameids lower than my IB PvP game
+    with open('./data/unformatted_unfiltered_pgcrdata_1k.json', 'a+') as outfile:
+        for i in range(1000):
             print("Attempt #",i+1)
             game += i
             try:
@@ -262,7 +262,7 @@ if __name__ == '__main__':
                 outfile.write(game_stats_json)
             except:
                 print("Something went wrong on game: ", game, "i: ",i)
-            time.sleep(2)
+            time.sleep(3)
 
 
     #for key in game_stats:
